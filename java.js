@@ -1,6 +1,6 @@
-for (x=0; x<256; x++) {
-    let div = document.createElement('div');
-    div.className = 'grid';
+const container = document.querySelector('#container');
 
-    document.getElementById('container').appendChild(div);
+for (i=1; i<273; i++) {
+    const div = document.createElement('div');
+    container.appendChild(div);
 }
