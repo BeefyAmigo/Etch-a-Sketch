@@ -7,4 +7,13 @@ for (i=1; i<273; i++) {
         event.target.style.backgroundColor = 'black';
     });
 }
+function setGridSize() {
+    let button = document.querySelector('button');
+    button.addEventListener('click', () => {
+         let userInput = prompt('Enter Custom Grid Size');
+         console.log(userInput);
+    })
+    
+}
+setGridSize();
 
