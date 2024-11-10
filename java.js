@@ -1,20 +1,28 @@
-const container = document.querySelector('#container');
-
-for (i=1; i<273; i++) {
-    let row = document.createElement('div');
-    row.classList.add('row')
-    container.appendChild(row);
-    div.addEventListener('mouseover', (event) => {
-        event.target.style.backgroundColor = 'black';
-    });
-}
-function setGridSize() {
-    let button = document.querySelector('button');
-    button.addEventListener('click', () => {
-         let userInput = prompt('Enter Custom Grid Size');
-         console.log(userInput);
-    })
+function createGrid(userInput) {
+    let screen = document.querySelector('.sketch-screen');
+    for (i = 0; i < userInput; i++) {
     
+        let col = document.createElement('div');
+        col.classList.add('column');
+
+        for(j = 0; j < userInput; j++) {
+
+            let row = document.createElement('div');
+            row.classList.add('row');
+            row.style.border = '2px solid black';
+            //row.innerText = (i * userInput) + j;
+            col.appendChild(row);
+        }
+        screen.appendChild(col)
+    }
 }
-setGridSize();
+//function setGridSize() {
+    //let button = document.querySelector('button');
+    //button.addEventListener('click', () => {
+         //let userInput = prompt('Enter Custom Grid Size');
+         //createGrid(userInput);
+    //})
+    
+//}
+createGrid(16);
 
