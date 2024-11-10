@@ -12,8 +12,12 @@ function createGrid(userInput) {
             row.style.border = '2px solid black';
             //row.innerText = (i * userInput) + j;
             col.appendChild(row);
+            row.addEventListener('mouseover', () => {
+                row.style.backgroundColor = 'black';
+            })
         }
-        screen.appendChild(col)
+        screen.appendChild(col);
+        
     }
 }
 //function setGridSize() {
