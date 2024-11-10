@@ -1,20 +1,22 @@
-* {
-    box-sizing: border-box;
+#heading {
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+    padding: 30px;
 }
 
 #container {
+    background-color: white;
+    height: 960px;
+    width: 960px;
+    margin: auto;
+}
+
+.row {
     display: flex;
-    flex-wrap: wrap;
 }
 
-#container>div {
+.col {
     border: 1px solid black;
-    height: 25px;
-    width:25px;
-}
-
-#container>div:nth-child(17n + 1) {
-    width: 100%;
-    border: 0;
-    height: 0;
+    flex: 1;
 }
